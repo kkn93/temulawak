@@ -1,0 +1,207 @@
+* {
+    text-decoration: none;
+    box-sizing: border-box;
+
+}
+
+@font-face {
+    font-family: 'Lilita One'; /* Ganti dengan nama yang Anda pilih */
+    src: url('source/LilitaOne-Regular.ttf') format('truetype'); /* Sesuaikan dengan lokasi dan format font */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inika'; /* Ganti dengan nama yang Anda pilih */
+    src: url('source/Inika-Regular.ttf') format('truetype'); /* Sesuaikan dengan lokasi dan format font */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: rgb(59, 108, 165);
+    margin: 0;
+    padding: 0;
+}
+
+.judul div {
+    padding: 0 20px;
+}
+
+.toga {
+    font-size: 26px;
+    font-family: 'Lilita One', sans-serif;
+    font-weight: 100;
+}
+
+.logo1,
+.logo2 {
+    display: flex;
+    align-items: center;
+}
+
+.logo1 img,
+.logo2 img {
+    margin: 0px 10px;
+}
+
+.judul {
+    background-color: rgb(69, 146, 217);
+    padding: 20px 0px;
+    margin-top: 0;
+    text-align: center;
+    font-family: 'LilitaOne';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nama {
+    text-align: center;
+    font-family: georgia;
+    font-weight: 100;
+    margin: 20px 0;
+}
+
+.ket {
+    background-color: rgb(129, 165, 209);
+    text-align: center;
+    padding: 6px 0px;
+    font-family: 'Inika', sans-serif;
+}
+
+.ket h4,
+.manfaat h4,
+.produk h4 {
+    font-size: 18px;
+}
+
+.ket p {
+    padding-bottom: 10px;
+}
+
+.manfaat {
+    background-color: rgb(129, 165, 209);
+    text-align: center;
+    padding:  10px 0;
+    margin: 30px 0;
+    margin-bottom: 30px;
+    font-family: 'Inika', sans-serif;
+}
+
+.produk {
+    background-color: rgb(129, 165, 209);
+    text-align: center;
+    padding:  10px 0px;
+    margin: 30px 0;
+    margin-bottom: 30px;
+    font-family: 'Inika', sans-serif;
+
+}
+
+.produk {
+    display: grid;
+    grid-template-areas: "l c1 r"
+        "l c2 r"
+        "l c3 r"
+        "l c4 r";
+    grid-template-columns: 1fr 1.5fr 1fr;
+}
+
+.nama_produk {
+    grid-area: c1;
+}
+
+#judul_bahan {
+    text-align: center;
+}
+
+.bahan {
+    grid-area: c2;
+    text-align: left;
+}
+
+#judul_cara {
+    text-align: center;
+}
+
+.cara {
+    grid-area: c3;
+    text-align: left;
+}
+
+#judul_manfaat_produk {
+    text-align: center;
+}
+
+.manfaat_produk {
+    grid-area: c4;
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+
+footer {
+    background-color: rgb(60, 114, 255);
+    text-align: center;
+    padding: 1px 0;
+    font-family: inria serif;
+}
+
+@media only screen and (max-width: 768px) {
+    .judul {
+        display: grid;
+        grid-template-areas: "logo1 logo2"
+            "toga toga";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .logo1 {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .logo2 {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .judul .logo1 {
+        padding-right: 0;
+    }
+
+    .judul .logo2 {
+        padding-left: 0;
+    }
+
+    .logo1 img{
+        grid-area: logo1;
+        margin: 0 10px;
+        margin-right: 5;
+    }
+
+    .logo2 img{
+        grid-area: logo2;
+        margin: 0 10px;
+        margin-left: 5;
+    }
+
+    .toga {
+        grid-area: toga;
+    }
+
+    .ket p {
+        margin: 0 80px;
+    }
+
+    .produk {
+        display: flex;
+        flex-direction: column;
+        padding: 0 40px;
+    }
+
+    footer p {
+        margin: 0 60px;
+    }
+}
